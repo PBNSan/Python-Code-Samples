@@ -8,16 +8,16 @@
 # The input to which_prize() will be the number of points (an integer). The function which_prize() should return the text "Congratulations! You have won a [prize name]!" with the prize name included if they have won a prize and the text "Oh dear, no prize this time." if there is no prize. As always, test your function to check whether it's performing correctly.
 
 def which_prize(points):
-	if 0<=points<=50:
+	if points<=50:
 		prize = "wooden rabbit"
 		return "Congratulations! You have won a {prize}!".format(prize=prize)
-	elif 51<=points<=150:
+	elif points<=150:
 		prize = "no prize"
 		return "Oh dear, no prize this time."
-	elif 151<=points<=180:
+	elif points<=180:
 		prize = "wafer-thin mint"
 		return "Congratulations! You have won a {prize}!".format(prize=prize)
-	elif 181<=points<=200:
+	elif points<=200:
 		prize = "penguin"
 		return "Congratulations! You have won a {prize}!".format(prize=prize)
 	else:
