@@ -1,0 +1,46 @@
+Scores To Rating Function Design
+Let's work through building up the structure of a new function. Imagine that you work for a consumer ratings website. Users submit reviews and scores for products they use, and you show the results so that consumers can make informed choices.
+
+Throughout this section we will write a function that takes as input five scores and aggregates them to output a single rating.
+
+Because the highest and lowest scores might be outliers and skew the results, we will take the three middle scores out of the five, discarding the highest and lowest.
+
+Then we will take the average (mean) of those three middle scores.
+
+For example, if the scores are 1,2,2,4,4 then we take the average of 2, 2 and 4 to get 2.6666666666.
+
+Then we will map that average score to a written rating like this:
+
+Average Score	Rating
+0 <= score < 1	Terrible
+1 <= score < 2	Bad
+2 <= score < 3	OK
+3 <= score < 4	Good
+4 <= score <= 5	Excellent
+Oh, and the input data might be messy - sometimes a string, not necessarily a float or an int. So we should check and convert it if necessary in order to do the calculations.
+
+Sounds like a lot? Don't worry, we will walk you through the process of breaking the problem into smaller bits and combining them together into a solution.
+
+
+My STEPS:
+
+
+Input : 5 Scores and Aggregate them to output a  single Rating
+
+out of five we ll take the average of those three middle scores
+
+map the average score to a written rating 
+
+check and convert input data into int or float to do calculations.
+
+
+Udacity's : Here are our four steps:
+
+Take each of the raw scores and convert each of them to a numerical type.
+Input: score as string/float/int. Output: score as float or int.
+Choose the middle 3 values from the set of 5 scores.
+Input: 5 scores as float or int. Output: 3 scores (same type).
+Take the average of three scores.
+Input: 3 scores as float or int. Output: 1 average score (float).
+Choose the correct word rating for the average score.
+Input: average score as float. Output: Rating as a string.
