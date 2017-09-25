@@ -22,16 +22,18 @@ def convert_to_numeric(score):
 	#Alternative Solution
 
 	#Approach 1
-	try:
-		return int(score)
-	except ValueError:
-		return float(score)
+	# try:
+	# 	return int(score)
+	# except ValueError:
+	# 	return float(score)
 	
 	#Approach 2
 	# return float(score) if '.' in score or 'e' in score.lower() else int(score)
 
 	#Approach 3
-	#return ast.literal_eval(score)
+	converted_score = float(score)
+	return converted_score
+
 
 
 
@@ -71,7 +73,7 @@ def score_to_rating_string(average_score):
 		rating = "OK"
 	elif average_score < 4:
 		rating = "Good"
-	elif average_score <= 5:
+	else:
 		rating = "Excellent"
 
 	return rating
